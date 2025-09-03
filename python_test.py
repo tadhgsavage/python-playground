@@ -100,8 +100,85 @@ print(popped_car)
 # Making this useful
 cars = ["fiat", 'ford', 'bentley', 'ferrari']
 last_car = cars.pop(1)
-message = (f"The last car i owned was a, {last_car.title()}.")
+message = (f"The last car I owned was a, {last_car.title()}.")
 print(message)
+
+# If position is not known one can use the remove method to remove it instead 
+cars = ["fiat", 'ford', 'bentley', 'ferrari']
+too_expensive = "fiat"
+cars.remove(too_expensive)
+message = (f"{too_expensive.title()}, was too expensive for me!")
+print(message)
+
+# Sorting a list permanently with the sort method 
+cars = ["fiat", 'ford', 'bentley', 'ferrari']
+cars.sort()
+print(cars)
+
+# Reversing the order with reverse=True
+cars = ["fiat", 'ford', 'bentley', 'ferrari']
+cars.sort(reverse=True)
+print(cars)
+
+# One can sort a list temporarily with the sorted function
+cars = ["fiat", 'ford', 'bentley', 'ferrari']
+print("here is the original order of the list")
+print(cars)
+print("\nHere is the sorted list")
+print(sorted(cars))
+print("\nHere is the original list again")
+print(cars)
+
+# Printing a list in reverse order
+cars.reverse()
+print(cars)
+
+# One can reverse back again by applying the reverse method again
+cars.reverse()
+print(cars)
+
+# Finding the length of a list
+print(len(cars))
+
+# Looping through a list 
+magicians = ['alice', 'chiara', 'toby']
+for magician in magicians:
+    print(magician.title())
+
+# Building the loop out to have a sentence
+magicians = ['alice', 'chiara', 'toby']
+for magician in magicians:
+    print(f'Hey, {magician.title()}, that was a great trick!')
+
+# One can also put as much as they want in a loop and the loop will loop it provided its inside of the loop
+magicians = ['alice', 'chiara', 'toby']
+for magician in magicians:
+    print(f"\nHey, {magician.title()}, that was a great trick!")
+    print(f"Well done {magician.title()}!")
+
+# Using the range fucntion to generate a list of numbers 
+for value in range(1, 6):
+    print(value)
+
+# Using range to make a list of numbers
+numbers = list(range(6))
+print(numbers)
+
+# We can add a thrid argument into the range funciton which is like a delimiter
+# List of even numbers
+even_numbers = list(range(0, 11, 2))
+print(even_numbers)
+
+
+
+
+
+
+
+
+      
+
+      
 
 
 
