@@ -214,10 +214,131 @@ friends_food.append("sugar")
 print(my_foods)
 print(friends_food)
 
+# Python refers to values that cannot change as immutable 
+# Tupples are simply immutable lists 
+# Tupples look just like a list but instead of using square brackets we use paranthesis 
+# Tupple of dimensions 
+dimensions = (200, 80)
+print(dimensions[0])
+print(dimensions[1])
+
+# Tupples are technicaly defined by the comma and nor parenthesis, that is used so it is neater
+# If you wanted to create a tupple with just one element you would need to insert a trailing comma
+location = (30, )
+
+# Although you may not modify a tupple you can redefine it
+
+# If Statements 
+cars = ['bugatti', 'honda', 'bmw', 'mercedes']
+for car in cars:
+    if car == 'bmw':
+        print(car.upper())
+    else:
+        print(car.title())
 
 
+# A double == sign signifies a search for equality and a != sign searches for inequality a single = sign sets it = to
+car = 'bmw'
+if car == 'bmw':
+    print('True')
+else:
+    print('False')
+if car != 'audi':
+    print('Not and Audi')
+else:
+    print('Car is an Audi')
 
 
+# Pizza restaurant example
+requested_topping = 'mushrooms'
+if requested_topping != 'mushrooms':
+    print('Dont use mushrooms!')
+else:
+    print("Add mushrooms")
+
+# One can also do numerical comparisons 
+# Set age at 20
+age = 20
+if age >= 18:
+    print('They can enter')
+else:
+    print('They may not enter')
+
+# Or one can look for an exact number say in a guessing game
+guess = 20
+if guess != 42:
+    print('Wrong Try Again!')
+else:
+    print('Correct!')
+
+
+# Incorporating AND and OR into statements
+age_0 = 18
+age_1 = 20
+
+if (age_0 >= 18) and (age_1 >= 18):
+    print('PASS')
+else:
+    print('FAIL')
+
+if (age_0 >= 18) or (age_1 >= 18):
+    print('PASS')
+else:
+    print('FAIL')
+
+# Using "in" to check the presense of an item in a list
+cars = ['bugatti', 'honda', 'bmw', 'mercedes']
+car = 'bugatti'
+if car in cars:
+    print(f'{car}, is already present.')
+else:
+    print(f'{car}, is not present.')
+
+# One can also add in the keyword "not" to check a presence
+cars = ['bugatti', 'honda', 'bmw', 'mercedes']
+car = 'ford'
+if car not in cars:
+    print(f'{car.title()}, is not in the list.')
+else:
+    print(f'{car}, is in the list.')
+
+# Addition of the elif into our if and else chain of conditionals 
+age = 22
+if age < 4:
+    print('Your ticket is free.')
+elif age < 18:
+    print('Your ticket is $15.00')
+else: 
+    print('Your ticket is $25.00')
+
+# A cleaner way to do this however
+age = 15
+if age <= 4:
+    price = 0
+elif age < 18:
+    price = 15
+else:
+    price = 20
+print(f'Welcome to the theme park your price is ${price}.')
+
+# One can use as many elif blocks as they like
+# For exmaple is a price was introduced for elders a new elif block could be added in for it 
+
+age = 67
+
+if age <= 4:
+    price = 0
+
+elif age > 65:
+    price = 0
+
+elif age < 18:
+    price = 15
+
+else:
+    price = 20
+
+print(f'The price for you is ${price}.')
 
 
 
