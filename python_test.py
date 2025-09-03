@@ -169,6 +169,21 @@ print(numbers)
 even_numbers = list(range(0, 11, 2))
 print(even_numbers)
 
+# Creating a list of squared numbers 
+# Start with an empty list 
+sqaures = []
+for value in range(1, 11):
+    square = value ** 2
+    sqaures.append(square)
+print(sqaures)
+
+
+# Performing simple statistics with python
+digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(min(digits))
+print(max(digits))
+print(sum(digits))
+
 
 
 
