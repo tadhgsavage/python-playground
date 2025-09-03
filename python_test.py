@@ -184,6 +184,36 @@ print(min(digits))
 print(max(digits))
 print(sum(digits))
 
+# Using a list comprehension to create a list of squares 
+squares = [value ** 2 for value in range(1, 11)]
+print(squares)
+
+# Slicing lists 
+players = ['ellie', 'sarah', 'nole', 'chiara', 'toby']
+print(players[0:3])
+print(players[1:4])
+# Omiting the first number will mean python starts at the begining of a list
+print(players[:4])
+# Ommiting the last likewise will make python continue to the end as well
+print(players[1:])
+# Negative numbers also work
+# This below prints the last three names in a list and if the list continued to grow it would continue printing the last 3 names
+print(players[-3:])
+
+
+# We can use a slice to also loop through part of a list
+players = ['ellie', 'sarah', 'nole', 'chiara', 'toby']
+for player in players[:3]:
+    print(player.title())
+
+# To copy a list take a slice of the entire list 
+my_foods = ['pizza', 'pasta', 'bread', 'sauce']
+friends_food = my_foods[:]
+my_foods.append("garlic")
+friends_food.append("sugar")
+print(my_foods)
+print(friends_food)
+
 
 
 
