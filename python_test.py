@@ -428,25 +428,6 @@ alien_0['x_position'] = 0
 alien_0['y_position'] = 10
 print(alien_0)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Starting with an empty dictionary and filling it
 alien_1 = {}
 print('\n',alien_1)
@@ -457,6 +438,63 @@ alien_1['x_position'] = 0
 alien_1['y_position'] = 10
 
 print('\n',alien_1)
+
+# One can change the value in a dictionary by simply redefining the value inside of it
+print(f'The current colour of the alien is {alien_1["colour"]}')
+alien_1['colour'] = 'yellow'
+print(f'The alien has changed colour to {alien_1["colour"]}')
+
+# Starting off with an empty dictionary
+alien_0 = {}
+alien_0['colour'] = 'blue'
+alien_0['points'] = '5'
+alien_0['x_position'] = 0
+alien_0['y_position'] = 12
+alien_0['speed'] = 'fast'
+print(f'\nThe current set up of the Alien 0 is \n{alien_0}')
+
+if alien_0['speed'] == 'slow':
+    x_increment = 2
+if alien_0['speed'] == 'medium':
+    x_increment = 4
+if alien_0['speed'] == 'fast':
+    x_increment = 6
+
+alien_0['x_position'] = x_increment + alien_0['x_position']
+print(f'\nNew position: {alien_0["x_position"]}')
+
+
+alien_2 = {'colour': 'blue', 'points': 5, 'speed': 'fast'}
+
+# A key value pair in the dictionary can be removed using the del statement 
+del alien_0['points']
+print(alien_0)
+
+
+favourite_languages = {
+    'chiara': 'html',
+    'toby': 'java',
+    'tadhg': 'python',
+    'jim': 'css',
+}
+print(f"Chiara's favourite language is, {favourite_languages['chiara'].upper()}")
+
+
+# Using keys in square brackets is fine however if the ket is nonexistent it will result in a traceback error
+# Therefore alternatively we could use the 'get' method
+# The get method requires a key as its first argument as a second optional argument a value of return can be placed 
+
+alien_0 = {'colour': 'green', 'points': '5', 'speed': 'slow'}
+alien_position = alien_0.get('alien_position', 'alient position not available')
+print(alien_position)
+alien_colour = alien_0.get('colour', 'Colour not in dictionary')
+print(alien_colour)
+
+
+
+
+
+
 
 
 
