@@ -377,3 +377,88 @@ if 'ham' in requested_toppings:
     print('Add ham')
 print('\nPizza finsihed')
 
+
+squares = [value ** 2 for value in range(1, 11, 2)]
+print(squares)
+
+cubes = [value ** 3 for value in range(1, 11, 2)]
+print(cubes)
+
+
+requested_toppings = ['mushrooms', 'pineapple', 'mozarella', 'ham']
+for requested_topping in requested_toppings:
+    if requested_topping == 'mushrooms':
+        print('NO MUSHROOMS')
+    else:
+        print(f'Adding, {requested_topping.upper()}.')
+print('\nFinsihed making your pizza.')
+
+# Checking for an empty list
+# When the name of a list is used in an if statement python retruns True if the list has at least one item and flase if not
+requested_toppings = ['mushrooms', 'pineapple', 'mozarella', 'ham']
+if requested_toppings: 
+    for requested_topping in requested_toppings:
+        print(f'Adding {requested_topping}, to your pizza.')
+    else:
+        print('Are you sure you want a plain pizza?!')
+
+    
+
+available_toppings = ('tomato', 'olives', 'salad', 'ham', 'sweetcorn', 'pineapple')
+requested_toppings = ['tomato', 'fries', 'salad', 'ham']
+
+for requested_topping in requested_toppings:
+    if requested_topping in available_toppings:
+        print(f'Added {requested_topping.title()}.')
+    else:
+        print(f'Sorry, {requested_topping.title()}, is not available.')
+
+print('\nYour Pizza is finsihed.')
+
+
+# Creating a simple dictionary
+alien_0 = {'colour': 'green' , 'points': 5}
+
+new_points = alien_0['points']
+print(f'You just earned {new_points} points.')
+
+# Lets add some elements such as x and y positions to the dictionary of alien_0
+print('\n',alien_0)
+alien_0['x_position'] = 0
+alien_0['y_position'] = 10
+print(alien_0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Starting with an empty dictionary and filling it
+alien_1 = {}
+print('\n',alien_1)
+
+alien_1['colour'] = 'green'
+alien_1['points'] = 5
+alien_1['x_position'] = 0
+alien_1['y_position'] = 10
+
+print('\n',alien_1)
+
+
+
+
+
