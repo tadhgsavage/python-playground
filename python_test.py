@@ -341,11 +341,39 @@ else:
 print(f'The price for you is ${price}.')
 
 
+# An else block if not always needed and does not have to be used, one may just use an elif block 
+# else functions more as a catch all statement, but you can catch a particualr test instead with the elif statement too.
+
+banned_users = ['alice', 'toby', 'john', 'leon']
+user = 'alice'
+
+if user in banned_users:
+    print(f'{user.title()}, is banned.')
+else:
+    print(f'{user.title()}, is not banned.')
+
+# Age checker to for addmision price
+age = 18
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 15
+elif age > 64:
+    price = 0
+elif age >= 18 and age <= 64:
+    price = 20
+
+print(f'Hello, welcome to the amusement park, your price today is, ${price}. Thank you.')
 
       
+# When more than one condition could be true, we can use a series of if statements negating the else and elif blocks
 
-      
-
-
-
+requested_toppings = ['mushrooms', 'pineapple', 'mozarella', 'ham']
+if 'mushroom' in requested_topping:
+    print('Add mushrooms')
+if 'peperoni' in requested_toppings:
+    print('Add peperoni')
+if 'ham' in requested_toppings:
+    print('Add ham')
+print('\nPizza finsihed')
 
