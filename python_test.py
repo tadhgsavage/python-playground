@@ -583,8 +583,47 @@ for key, value in favourite_languages.items():
     print(f'Value: {value}')
 print('These are peoples favourite langauges.')
 
+# Now in just two lines of code we can neatly display all information.
 for name, language in favourite_languages.items():
     print(f'{name.title()}, favourite language is {language}.')
+
+
+# In a dictionary we also have the keys method. .keys() this enables us to just grab that first colomn, which corolates 
+# to the keys 
+
+
+favourite_languages = {
+    'toby': 'python',
+    'chris': 'rust',
+    'tadhg': 'css',
+    'phil': 'java',
+    'sarah': 'rust',
+    }
+
+for names in favourite_languages:
+    print(names.title())
+
+for keys, values in favourite_languages.items():
+    print(f'Keys: {keys.title()}')
+    print(f'Values: {values}')
+
+for key, value in favourite_languages.items():
+    print(f'{key.title()} favourite language is {value}.')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
