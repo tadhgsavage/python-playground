@@ -529,11 +529,62 @@ print(favourite_languages.get('chiara', 'Chiara Not Returned').upper())
 chiara_language  = favourite_languages.get('chiara', 'Chiara Value Not Returned').upper()
 print(chiara_language)
 
+# If there is a chance the key you're looking for does not exist the use the get method as the function will result 
+# in a traceback error.
+
+# Lets now look as to how we can loop through a dictionary
+# First lets create a dictionary of a user
+
+user_0 = {
+    'username': 'tsavage',
+    'first_name': 'tadhg',
+    'surname': 'savage',
+}
+
+for key, value in user_0.items():
+    print(f'\nKey: {key}')
+    print(f'Value: {value}')
+print('\nThese are the keys and valus for your user.')
 
 
+# Below will work only for keys as a dictionary will iterate in order hence the necesity to use the .items() method
+# which will iterate again over the second colomn in the dictionary.
 
+for key in user_0:
+    print(f'\nKey: {key}')
 
+for value in user_0:
+    print(f'\nValue: {value}')
 
+# Test case for user_1 written again.
+
+user_1 = {
+    'username': 'cpresaghi',
+    'forename': 'chiara',
+    'surname': 'presaghi',
+}
+
+for key, value in user_1.items():
+    print(f'\nKey: {key.upper()}')
+    print(f'Value: {value}')
+print('These are the keys and values.')
+
+# Lets now recreate this dictionary and loop for the favourite languages
+
+favourite_languages = {
+    'john': 'java', 
+    'cena': 'html', 
+    'tadhg': 'python', 
+    'chiara': 'css',
+}
+
+for key, value in favourite_languages.items():
+    print(f'\nKey: {key}')
+    print(f'Value: {value}')
+print('These are peoples favourite langauges.')
+
+for name, language in favourite_languages.items():
+    print(f'{name.title()}, favourite language is {language}.')
 
 
 
