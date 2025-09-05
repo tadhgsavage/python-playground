@@ -490,6 +490,45 @@ print(alien_position)
 alien_colour = alien_0.get('colour', 'Colour not in dictionary')
 print(alien_colour)
 
+alien_0 = {}
+alien_0['colour'] = 'green'
+alien_0['points'] = '5'
+alien_0['position'] = 2
+alien_0['speed'] = 'medium'
+
+print(alien_0)
+
+if alien_0['speed'] == 'slow':
+    increment = 2
+if alien_0['speed'] == 'medium':
+    increment = 4
+if alien_0['speed'] == 'fast':
+    increment = 6
+
+print(f"Alien 0's posiion is {increment + alien_0['position']}.")
+
+
+# Creating a simple dictionary from memory 
+
+bob = {'hair': 'brown', 'eyes': 'green', 'height': 'tall'}
+print(bob['eyes'].title())
+
+# Creating a long dictionary from memory 
+
+favourite_languages = {
+    'chiara': 'html',
+    'tadhg': 'python',
+    'dan': 'golang',
+    }
+
+print(favourite_languages['dan'].title() , favourite_languages['tadhg'].title() , favourite_languages['chiara'].upper())
+
+# Lets now chuck in some use of the get method
+
+print(favourite_languages.get('chiara', 'Chiara Not Returned').upper())
+chiara_language  = favourite_languages.get('chiara', 'Chiara Value Not Returned').upper()
+print(chiara_language)
+
 
 
 
