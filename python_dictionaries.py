@@ -1,12 +1,12 @@
 favourite_languages = {
-    'sarah': 'python',
-    'toby': 'rust',
-    'matt': 'css',
-    'tadhg': 'c',
+    'toby': 'python',
     'chiara': 'html',
-}
+    'tadhg': 'rust',
+    'jamie': 'css',
+    'dan': 'golang',
+    }
 
-friends = ['tadhg', 'chiara']
+freinds = ['tadhg', 'chiara']
 
-for key in favourite_languages.key():
-    print(key)
+for key in favourite_languages.keys():
+    print(key.title())
