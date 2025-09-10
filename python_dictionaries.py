@@ -55,13 +55,33 @@ for langauge in (set(sorted(favourite_languages.values()))):
 
 
 # One can also use set on a list to quickly remove duplicates, order does not matter
-# Due to hasing the order for sets is random
+# Due to hasing the order for sets is fairly random (not truly, but fairly)
 cars = ['bugatti', 'bmw', 'ford', 'ford', 'honda']
 print(set(cars))
 
 # One can cal the sorted function which will put the printed set into alphabetical order such as here below
 cars = ['bugatti', 'bmw', 'ford', 'ford', 'honda']
 print(sorted(set(cars)))
+
+# Nesting
+# Nesting multiple dicitonaries inside of a list 
+
+# Creating a simple dictionary of each alien
+alien_0 = {'colour': 'green', 'points': 5}
+alien_1 = {'colour': 'red', 'points': 10}
+alien_2 = {'colour': 'yellow', 'points': 2}
+
+# Creating a list of which inside is the dictionary of each alien
+aliens =[alien_0, alien_1, alien_2]
+print(aliens)
+
+# Or one can loop through the list to print out each alien
+for alien in aliens:
+    print(alien)
+
+
+
+
 
 
 
