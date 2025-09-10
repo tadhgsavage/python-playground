@@ -99,6 +99,17 @@ for alien in aliens[:5]:
 # To prove that we have indeed generated 30 aliens we can print out the length of the list of aliens
 print(f'There is a total {len(aliens)} Aliens')
 
+# All of these 30 aliens are identical however they are also seperate objects which allows for individual modification of each
+# So lets now change the first three aliens colour, speed and points and print out the first five aliens
+for alien in aliens[:3]:
+    if alien['colour'] == 'green':
+        alien['colour'] = 'yellow'
+        alien['points'] = 10
+        alien['speed'] = 'medium'
+for alien in aliens[:5]:
+    print(alien)
+
+
 
 
 
