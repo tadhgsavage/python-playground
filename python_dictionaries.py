@@ -80,6 +80,29 @@ for alien in aliens:
     print(alien)
 
 
+# Lets make some code that will automatically generate 30 aliens to put inside of a dictionary nested in a list 
+
+# First lets start off with an empty list of aliens
+aliens = []
+# Make 30 identical green aliens
+# Here the range fucntion returns a series of numbers telling python how many times we want the loop the repeat, each repeat is a new alien
+for alien_number in range(30):
+    # The loop is ran 30 times so we create a 'new alien' as described below 30 times
+    new_alien = {'colour': 'green', 'points': 5, 'speed': 'slow'}
+    # Each 'new alien' is then appened to the empty list of aliens
+    aliens.append(new_alien)
+
+# We can now use a loop and a slice to print out the first 5 aliens to prove
+for alien in aliens[:5]:
+    print(alien)
+
+# To prove that we have indeed generated 30 aliens we can print out the length of the list of aliens
+print(f'There is a total {len(aliens)} Aliens')
+
+
+
+
+
 
 
 
