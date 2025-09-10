@@ -101,20 +101,54 @@ print(f'There is a total {len(aliens)} Aliens')
 
 # All of these 30 aliens are identical however they are also seperate objects which allows for individual modification of each
 # So lets now change the first three aliens colour, speed and points and print out the first five aliens
+# As we want to modify only the first three, we loop through the first three using a slice 
 for alien in aliens[:3]:
+    # If statement is used as although they are green now that wont always be the case and we only want to modify green aliens
     if alien['colour'] == 'green':
         alien['colour'] = 'yellow'
         alien['points'] = 10
         alien['speed'] = 'medium'
+# The program could be extended with an elif block to make yellow ones red 
+    elif alien['colour'] == 'yellow':
+        alien['colour'] = 'red'
+        alien['points'] = 15
+        alien['speed'] = 'fast'
+# Loop through the first 5 aliens and print out their colour
 for alien in aliens[:5]:
     print(alien)
 
+# The program could be extended with an elif block to make yellow ones red 
 
 
+pizzas =[]
+for replicated_pizza in range(30):
+    new_pizza = {'type': 'diavola', 'crust': 'thin'}
+    pizzas.append(new_pizza)
+for pizza in pizzas:
+    print(pizza)
 
 
+# Now lets create a list in a dictionary
 
+pizza = {
+    'crust': 'thick',
+    'toppings': ['tomatoes', 'salami', 'mozzarella', 'onion'],
+}
+print(f'You have ordered a {pizza["crust"]} crust with:')
+for topping in pizza['toppings']:
+    print(f'{topping}')
 
+favourite_pizzas = {
+    'tom': ['diavola', 'peperoni'],
+    'tadhg': ['margherita', 'sloppy guisepe'],
+    'chiara': ['marinara', 'diavola'],
+}
+
+for names, pizzas in favourite_pizzas.items():
+    print(f'{names.title()}, favourite pizza is:')
+    for pizza in pizzas:
+        print(pizza.title())
+    
 
 
 
