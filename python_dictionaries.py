@@ -23,7 +23,48 @@ favourite_languages = {
 for key in (sorted(favourite_languages.keys())):
     print(f'Hi, {key.title()}')
 
+# Printing out of all of the langages in alphabetical order
+
 print('The following languages have been mentioned:')
-for lanhuage in (sorted(favourite_languages.values())):
-    print(lanhuage.title())
+for language in (sorted(favourite_languages.values())):
+    print(language.title())
+
+
+# Identifying duplicates making a collection using the function "set"
+# If the list was long and one wanted to remove duplicates one can use the function set to achieve this
+
+favourite_languages = {
+    'toby': 'python',
+    'tadhg': 'html',
+    'euan': 'java',
+    'chiara': 'css',
+    'john': 'python',
+    'kobi': 'html',
+}
+
+
+print('Here are the choice of all languages:')
+# This removes duplictaes and sorts in alphabetical order
+for langauge in (set(sorted(favourite_languages.values()))):
+    # Looks for if html and css exist and if they do they print them to upper 
+    if langauge == 'html' or langauge == 'css':
+        print(langauge.upper())
+    # For all other languegs the get printed to title case only
+    else:
+        print(langauge.title())
+
+
+# One can also use set on a list to quickly remove duplicates, order does not matter
+# Due to hasing the order for sets is random
+cars = ['bugatti', 'bmw', 'ford', 'ford', 'honda']
+print(set(cars))
+
+# One can cal the sorted function which will put the printed set into alphabetical order such as here below
+cars = ['bugatti', 'bmw', 'ford', 'ford', 'honda']
+print(sorted(set(cars)))
+
+
+
+
+    
 
