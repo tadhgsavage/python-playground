@@ -150,29 +150,48 @@ for names, pizzas in favourite_pizzas.items():
         print(pizza.title())
     
 
-# Creating a dicitonary inside of a dicitonary
+# Creating a quick list inside of a dictionary and printing out with styling
+
+favourite_languages = {
+    'tadhg': ['python', 'java'],
+    'chiara': ['html', 'css', 'go'],
+    'toby': ['django', 'c'],
+}
+
+for names, languages in favourite_languages.items():
+    print(f"{names.title()}'s favourite languages are:")
+    for language in languages:
+        if language.lower() in {'html', 'css', 'c'}:
+            print(f'\t{language.upper()}')
+        else:
+            print(f'\t{language.title()}')
+
+
+# Creating a dictionary inside of a dictionary
 
 users = {
     'tsavage': {
         'first': 'tadhg',
         'last': 'savage',
+        'email': 'tadhgsavage@gmail.com',
         'location': 'kent',
-    },
+        },
     'cpresaghi': {
         'first': 'chiara',
         'last': 'presaghi',
+        'email': 'chiara.presaghi@gmail.com',
         'location': 'rome',
-    },
-}
+        },
+    }
 
 for username, user_info in users.items():
     print(f'Username: {username}')
-    full_name = f'{user_info['first']} {user_info['last']}'
+    full_name = (f"{user_info['first']} {user_info['last']}")
+    email = user_info['email']
     location = user_info['location']
-    print(f"\tFull name: {full_name.title()}")
-    print(f"\tLocation: {location.title()}")
-
-
-
     
+    print(f'\t{full_name.title()}')
+    print(f'\t{email}')
+    print(f'\t{location.title()}')
+
 
