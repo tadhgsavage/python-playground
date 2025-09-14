@@ -12,3 +12,8 @@ if number % 2 == 0:
     print(f'Your nuber: {number}, is even!')
 else:
     print(f'Sorry chuck your number of {number} is no good.')
+
+current_number = 1
+while current_number <= 5:
+    print(current_number)
+    current_number = current_number + 1
